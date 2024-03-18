@@ -14,7 +14,7 @@ export function NavBar() {
   };
 
   return (
-    <div>
+    <div className='z-50 relative'>
       <div className="shadow-md bg-neutral-950">
         <div
           className={`container mx-auto flex flex-row items-center justify-between gap-8 py-6 text-lg px-8  ${isMenuOpen ? 'flex-col' : 'flex-row'}`}

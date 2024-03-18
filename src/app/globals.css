@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.bebasNeue {
+  font-family: var(--bebasNeue);
+}
+.saira {
+  font-family: var(--saira)
+}

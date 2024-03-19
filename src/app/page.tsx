@@ -32,7 +32,14 @@ export default function Home() {
         </div>
         <BackgroundBeams />
       </section>
-      <section></section>
+      <section className="pb-96 bg-neutral-200">
+        <div className="container mx-auto flex flex-col">
+          <div className="">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

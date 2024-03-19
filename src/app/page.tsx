@@ -1,6 +1,8 @@
+"use client";
+import { AccordionRadix } from "@/components/accordion-radix";
 import { NavBar } from "@/components/nav-bar";
-import { AuroraBackground } from "@/components/ui/aurora-background";
 import { BackgroundBeams } from "@/components/ui/background-beams";
+
 
 export default function Home() {
   return (
@@ -38,6 +40,8 @@ export default function Home() {
             <div></div>
             <div></div>
           </div>
+          <AccordionRadix />
+          
         </div>
       </section>
     </div>

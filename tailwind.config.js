@@ -11,18 +11,19 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
-      animation: {
-        aurora: "aurora 60s linear infinite",
-      },
       keyframes: {
-        aurora: {
-          from: {
-            backgroundPosition: "50% 50%, 50% 50%",
-          },
-          to: {
-            backgroundPosition: "350% 50%, 350% 50%",
-          },
+        slideDown: {
+          from: { height: '0px' },
+          to: { height: 'var(--radix-accordion-content-height)' },
         },
+        slideUp: {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0px' },
+        },
+      },
+      animation: {
+        slideDown: 'slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+        slideUp: 'slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1)',
       },
     },
   },

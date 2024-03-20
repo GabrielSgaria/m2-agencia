@@ -1,13 +1,15 @@
 "use client";
 import { AccordionRadix } from "@/components/accordion-radix";
+import { CardGoogle } from "@/components/card-google";
 import { NavBar } from "@/components/nav-bar";
 import { BackgroundBeams } from "@/components/ui/background-beams";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div>
       <NavBar />
-      <section className="bg-neutral-950">
+      <section className="bg-neutral-950 ">
         <div className="container mx-auto flex flex-col items-center justify-center relative z-10 h-[650px]">
           <div className="flex w-full flex-col items-center justify-center gap-8 ">
             <div className="flex flex-col items-center justify-center sm:items-start">
@@ -33,13 +35,58 @@ export default function Home() {
         </div>
         <BackgroundBeams />
       </section>
-      <section className="pb-96 bg-neutral-200">
+      <section className="py-16 bg-neutral-300">
         <div className="container mx-auto flex flex-col">
-          <div className="">
-            <div></div>
-            <div></div>
+          <div className="flex justify-around gap-16">
+            <div className="text-6xl font-semibold bebasNeue">
+              O QUE <br /> FAZEMOS?
+            </div>
+            <div className="max-w-[550px] text-2xl font-bold saira z-20 text-neutral-900">
+              Cada projeto é uma chance única de impactar positivamente o seu
+              negócio. Nossa equipe altamente capacitada busca constantemente
+              ultrapassar limites criativos e de eficácia, sempre buscando
+              superar expectativas e impulsionar o sucesso do cliente.
+            </div>
           </div>
           <AccordionRadix />
+          <div className="absolute flex -ml-[5px] -mt-[60px] rotate-[130deg] opacity-85 w-64">
+            <Image
+              width={400}
+              height={400}
+              src="/svgs/elements/18.svg"
+              alt="Fita adesiva"
+            />
+          </div>
+          <div className="absolute flex ml-[955px] mt-[120px] rotate-[220deg] opacity-90 w-64">
+            <Image
+              width={400}
+              height={400}
+              src="/svgs/elements/16.svg"
+              alt="Mira"
+            />
+          </div>
+        </div>
+      </section>
+      <section className="py-16 bg-neutral-950">
+        <div className="container mx-auto flex flex-col">
+          <div className="flex justify-around gap-16">
+            <div className="text-6xl font-semibold bebasNeue text-neutral-100">
+              Nossos <br /> Clientes
+            </div>
+            <div className="max-w-[550px] text-2xl saira text-neutral-100">
+              Apresentamos alguns dos nossos clientes que alcançaram sucesso por
+              meio da nossa colaboração e expertise. Ao trabalhar em estreita
+              parceria com eles, identificamos oportunidades, desenvolvemos
+              estratégias personalizadas e implementamos soluções inovadoras que
+              geraram resultados tangíveis
+            </div>
+          </div>
+        </div>
+        <div className="flex text-center justify-center mx-auto container my-16 text-neutral-100">
+          CAROUSEL CLIENTES
+        </div>
+        <div className="container mx-auto items-center justify-center flex">
+          <CardGoogle />
         </div>
       </section>
     </div>

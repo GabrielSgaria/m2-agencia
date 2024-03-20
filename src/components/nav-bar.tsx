@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { DotsHorizontalIcon, PersonIcon } from '@radix-ui/react-icons';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,13 +26,12 @@ export function NavBar() {
               className="size-8 text-zinc-50 hover:size-9 focus:outline-none lg:hidden"
             />
           </div>
-          <div>
+          <div className='w-16'>
             <Link
               href="/"
               onClick={closeMenu}
-              className="tracking-[.1rem] bebasNeue text-3xl font-bold text-neutral-50 hover:underline"
             >
-              {'M2 AGÊNCIA'}
+              <Image width={400} height={400} src='/image/icone.png' alt='Logo Principal'/>
             </Link>
           </div>
 

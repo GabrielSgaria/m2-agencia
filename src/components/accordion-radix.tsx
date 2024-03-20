@@ -3,7 +3,7 @@ import { ChevronDownIcon } from "@radix-ui/react-icons";
 
 export function AccordionRadix() {
   return (
-    <div className="flex justify-center items center container mx-auto mt-16">
+    <div className="flex justify-center items center container mx-auto mt-20 z-50">
       <Accordion.Root
         className="rounded-md w-full mx-1 sm:w-3/4 bg-neutral-950 text-neutral-100 shadow-xl text-center"
         type="single"

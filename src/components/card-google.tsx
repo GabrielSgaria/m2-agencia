@@ -18,7 +18,7 @@ export function CardGoogle({
   dataCard,
 }: CardGoogleProps) {
   const [showFullText, setShowFullText] = useState(false);
-  const shouldDisplayButton = text.length > 150;
+  const shouldDisplayButton = text.length > 200;
 
   const toggleShowFullText = () => {
     setShowFullText(!showFullText);
@@ -26,11 +26,7 @@ export function CardGoogle({
 
   return (
     <div
-      className={`w-96 flex flex-col bg-neutral-800 gap-4 p-4 rounded-lg ${
-        showFullText
-          ? "pb-10 transition-all duration-500"
-          : "pb-4 transition-all duration-500"
-      }`}
+      className={`mx-3 w-96 min-h-[15rem] h-auto flex flex-col bg-neutral-800 gap-4 p-4 rounded-lg`}
     >
       <div className="flex flex-row items-center w-full gap-4 justify-between ">
         <div className="w-14 h-12 rounded-full ">
@@ -71,11 +67,13 @@ export function CardGoogle({
       </div>
       <div
         className={`w-full text-neutral-50 text-sm overflow-hidden ${
-          showFullText ? "h-auto" : "h-auto"
+          showFullText ? "h-auto" : "max-h-36"
         }`}
       >
         <p>
-          {showFullText ? text : `${text.slice(0, 150)}...`}{" "}
+          {showFullText
+            ? text
+            : `${text.slice(0, 200)}${shouldDisplayButton ? "..." : ""}`}{" "}
           {shouldDisplayButton && (
             <span
               onClick={toggleShowFullText}

@@ -4,6 +4,8 @@ import { CardGoogle } from "@/components/card-google";
 import { NavBar } from "@/components/nav-bar";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 export default function Home() {
   return (
@@ -79,11 +81,25 @@ export default function Home() {
         </div>
         <div className="container mx-auto items-center justify-center flex">
           <CardGoogle
-            altImage="Vl Imóveis avaliação"
+            altImage="Vl Imóveis avaliação google"
             nameCard="VL IMÓVEIS"
             dataCard="19-03-2024"
             avatarGoogle="/image/av-google/VL-imoveis.png"
-            text="Obrigado por compartilhar sua experiência positiva conosco! Ficamos felizes em saber que nosso trabalho de Marketing nas redes sociais está gerando Resultados impressionantes. Seu feedback é muito importante para nós e nos motiva a continuar aprimorando nossos serviços. Estamos ansiosos para continuar colaborando e alcançando ainda mais sucesso juntos! 😊🚀"
+            text=""
+          />
+          <CardGoogle
+            altImage="Lorian veiga avaliação google"
+            nameCard="Lorian Veiga"
+            dataCard="09-2024"
+            avatarGoogle="/image/av-google/lorian-veiga.png"
+            text="Agência super comprometida, trabalho excelente."
+          />
+          <CardGoogle
+            altImage="Bianca Souza Granado avaliação google"
+            nameCard="Bianca Souza Granado "
+            dataCard="09-2024"
+            avatarGoogle="/image/av-google/bianca-souza-granado.png"
+            text="Ótimo trabalho!"
           />
         </div>
       </section>

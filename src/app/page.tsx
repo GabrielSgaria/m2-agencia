@@ -36,10 +36,18 @@ export default function Home() {
         <BackgroundBeams />
       </section>
       <section className="py-16 bg-neutral-300">
-        <div className="container mx-auto flex flex-col">
-          <div className="flex justify-around gap-16">
-            <div className="text-6xl font-semibold bebasNeue">
+        <div className="container  mx-auto flex flex-col">
+          <div className=" flex justify-around gap-16">
+            <div className="flex relative text-6xl font-semibold bebasNeue">
               O QUE <br /> FAZEMOS?
+            <div className="absolute top-0 left-0 transform -translate-x-[155px] -translate-y-20 -rotate-[50deg] opacity-90 w-80">
+              <Image
+                width={400}
+                height={400}
+                src="/svgs/elements/18.svg"
+                alt="Fita adesiva"
+                />
+                </div>
             </div>
             <div className="max-w-[550px] text-2xl font-bold saira z-20 text-neutral-900">
               Cada projeto é uma chance única de impactar positivamente o seu
@@ -49,22 +57,6 @@ export default function Home() {
             </div>
           </div>
           <AccordionRadix />
-          <div className="absolute flex -ml-[5px] -mt-[60px] rotate-[130deg] opacity-85 w-64">
-            <Image
-              width={400}
-              height={400}
-              src="/svgs/elements/18.svg"
-              alt="Fita adesiva"
-            />
-          </div>
-          <div className="absolute flex ml-[955px] mt-[120px] rotate-[220deg] opacity-90 w-64">
-            <Image
-              width={400}
-              height={400}
-              src="/svgs/elements/16.svg"
-              alt="Mira"
-            />
-          </div>
         </div>
       </section>
       <section className="py-16 bg-neutral-950">

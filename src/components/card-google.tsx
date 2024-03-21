@@ -1,16 +1,44 @@
+import { useState } from "react";
+import { StarFilledIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 
-export function CardGoogle() {
-  return (
-    <div className="w-96 h-56 flex flex-col bg-neutral-800  p-4 rounded-lg">
+export interface CardGoogleProps {
+  text: string;
+  avatarGoogle: string;
+  altImage: string;
+  nameCard: string;
+  dataCard: string;
+}
 
+export function CardGoogle({
+  text,
+  avatarGoogle,
+  altImage,
+  nameCard,
+  dataCard,
+}: CardGoogleProps) {
+  const [showFullText, setShowFullText] = useState(false);
+  const shouldDisplayButton = text.length > 150;
+
+  const toggleShowFullText = () => {
+    setShowFullText(!showFullText);
+  };
+
+  return (
+    <div
+      className={`w-96 flex flex-col bg-neutral-800 gap-4 p-4 rounded-lg ${
+        showFullText
+          ? "pb-10 transition-all duration-500"
+          : "pb-4 transition-all duration-500"
+      }`}
+    >
       <div className="flex flex-row items-center w-full gap-4 justify-between ">
         <div className="w-14 h-12 rounded-full ">
           <Image
             width={900}
             height={400}
-            alt="ImageGoogle"
-            src="/image/sgaria.jpeg"
+            alt={altImage}
+            src={avatarGoogle}
             className="rounded-full w-full h-full object-cover"
           />
         </div>
@@ -18,7 +46,7 @@ export function CardGoogle() {
         <div className="w-full">
           <div className="flex flex-col gap-1 w-full">
             <div className="text-base text-neutral-50 font-bold flex flex-row justify-between">
-              Gabriel dos Santos Sgaria
+              {nameCard}
               <div className="w-5 h-5 rounded-full">
                 <Image
                   width={900}
@@ -30,11 +58,33 @@ export function CardGoogle() {
               </div>
             </div>
 
-            <div className="text-xs text-neutral-400">19-03-2024</div>
-          
+            <div className="text-xs text-neutral-400">{dataCard}</div>
           </div>
         </div>
-
+      </div>
+      <div className="w-full flex flex-row">
+        <StarFilledIcon className="text-yellow-400 size-5" />
+        <StarFilledIcon className="text-yellow-400 size-5" />
+        <StarFilledIcon className="text-yellow-400 size-5" />
+        <StarFilledIcon className="text-yellow-400 size-5" />
+        <StarFilledIcon className="text-yellow-400 size-5" />
+      </div>
+      <div
+        className={`w-full text-neutral-50 text-sm overflow-hidden ${
+          showFullText ? "h-auto" : "h-auto"
+        }`}
+      >
+        <p>
+          {showFullText ? text : `${text.slice(0, 150)}...`}{" "}
+          {shouldDisplayButton && (
+            <span
+              onClick={toggleShowFullText}
+              className="cursor-pointer text-neutral-500"
+            >
+              {showFullText ? "Ver menos" : "Ver mais..."}
+            </span>
+          )}
+        </p>
       </div>
     </div>
   );

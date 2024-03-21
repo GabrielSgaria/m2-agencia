@@ -40,14 +40,14 @@ export default function Home() {
           <div className=" flex justify-around gap-16">
             <div className="flex relative text-6xl font-semibold bebasNeue">
               O QUE <br /> FAZEMOS?
-            <div className="absolute top-0 left-0 transform -translate-x-[155px] -translate-y-20 -rotate-[50deg] opacity-90 w-80">
-              <Image
-                width={400}
-                height={400}
-                src="/svgs/elements/18.svg"
-                alt="Fita adesiva"
+              <div className="absolute top-0 left-0 transform -translate-x-[155px] -translate-y-20 -rotate-[50deg] opacity-90 w-80">
+                <Image
+                  width={400}
+                  height={400}
+                  src="/svgs/elements/18.svg"
+                  alt="Fita adesiva"
                 />
-                </div>
+              </div>
             </div>
             <div className="max-w-[550px] text-2xl font-bold saira z-20 text-neutral-900">
               Cada projeto é uma chance única de impactar positivamente o seu
@@ -78,7 +78,13 @@ export default function Home() {
           CAROUSEL CLIENTES
         </div>
         <div className="container mx-auto items-center justify-center flex">
-          <CardGoogle />
+          <CardGoogle
+            altImage="Vl Imóveis avaliação"
+            nameCard="VL IMÓVEIS"
+            dataCard="19-03-2024"
+            avatarGoogle="/image/av-google/VL-imoveis.png"
+            text="Obrigado por compartilhar sua experiência positiva conosco! Ficamos felizes em saber que nosso trabalho de Marketing nas redes sociais está gerando Resultados impressionantes. Seu feedback é muito importante para nós e nos motiva a continuar aprimorando nossos serviços. Estamos ansiosos para continuar colaborando e alcançando ainda mais sucesso juntos! 😊🚀"
+          />
         </div>
       </section>
     </div>

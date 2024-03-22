@@ -14,6 +14,7 @@ import { Footer } from "@/components/footer";
 import { ButtonWpp } from "@/components/button-wpp";
 import { CardCollaborator } from "@/components/card-collaborator";
 import { CardCounter } from "@/components/card-caunter";
+import { ContactForm } from "@/components/form-contact";
 
 export default function Home() {
   const windowSize = useWindowSize();
@@ -58,7 +59,7 @@ export default function Home() {
                 forma clara e transparente para nossa equipe e clientes.
               </p>
             </div>
-            <div className="">
+            <div>
               <ButtonWpp />
             </div>
           </div>
@@ -173,15 +174,25 @@ export default function Home() {
       <section className="py-16 bg-neutral-950">
         <div className="container mx-auto flex flex-col">
           <div className="flex items-center justify-around gap-16 flex-col sm:flex-row">
-            <div className="text-5xl text-center sm:text-start font-semibold bebasNeue text-neutral-100">
-              Nossos <br /> Clientes
+            <div className="text-center sm:text-start">
+              <div className="flex flex-col gap-16">
+                <span className="text-5xl font-semibold bebasNeue text-neutral-100">
+                  Nossos <br /> Clientes
+                </span>
+                <p className="text-2xl saira max-w-[500px] text-neutral-100 ">
+                  Apresentamos alguns dos nossos clientes que alcançaram sucesso
+                  por meio da nossa colaboração e expertise. Ao trabalhar em
+                  estreita parceria com eles, identificamos oportunidades,
+                  desenvolvemos estratégias personalizadas e implementamos
+                  soluções inovadoras que geraram resultados tangíveis
+                </p>
+              </div>
             </div>
-            <div className="max-w-[430px] text-center sm:text-start sm:max-w-[550px] text-xl sm:text-2xl saira text-neutral-100">
-              Apresentamos alguns dos nossos clientes que alcançaram sucesso por
-              meio da nossa colaboração e expertise. Ao trabalhar em estreita
-              parceria com eles, identificamos oportunidades, desenvolvemos
-              estratégias personalizadas e implementamos soluções inovadoras que
-              geraram resultados tangíveis
+            <div className="rounded-xl p-8 max-w-[430px] h-[540px] bg-neutral-900 border-neutral-800 border-r-2 border-b-2 shadow-2xl text-center sm:text-start sm:w-[550px] text-xl sm:text-2xl saira text-neutral-100">
+              <h1 className="text-neutral-100 text-center text-5xl font-semibold bebasNeue mb-5">
+                Contato
+              </h1>
+              <ContactForm />
             </div>
           </div>
         </div>

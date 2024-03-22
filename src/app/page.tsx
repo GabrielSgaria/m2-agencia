@@ -67,9 +67,9 @@ export default function Home() {
       <section className="py-16 bg-neutral-200">
         <div className="container mx-auto flex flex-col">
           <div className="flex items-center justify-around gap-16 flex-col sm:flex-row">
-            <div className="flex relative text-6xl font-semibold bebasNeue">
+            <div className="flex relative text-6xl text-center sm:text-start font-semibold bebasNeue">
               O QUE <br /> FAZEMOS?
-              <div className="absolute top-0 left-0 transform -translate-x-[130px] -translate-y-[40px] sm:-translate-x-[155px] sm:-translate-y-20 -rotate-[50deg] opacity-90 w-60 sm:w-80">
+              <div className="absolute top-0 left-0 transform -translate-x-[90px] -translate-y-[40px] sm:-translate-x-[155px] sm:-translate-y-20 -rotate-[50deg] opacity-90 w-60 sm:w-80">
                 <Image
                   width={400}
                   height={400}
@@ -92,14 +92,14 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="w-full  flex mx-auto justify-center bg-neutral-200 h-full ">
+      <div className="w-full flex mx-auto justify-center bg-neutral-200 h-full ">
         <p className=" border-b-[0.1rem] w-[450px] sm:w-[1020px] border-neutral-400" />
       </div>
 
       <section className="bg-neutral-200 py-24">
         <div className="container mx-auto flex flex-col gap-8">
           <div className="flex flex-col items-center justify-around gap-16 sm:flex-row w-full sm:mb-8">
-            <div className="flex text-6xl font-semibold bebasNeue">
+            <div className="flex text-6xl text-center sm:text-start font-semibold bebasNeue">
               CONHEÇA A <br /> NOSSA EQUIPE
             </div>
             <div className="flex max-w-[430px] text-center sm:text-start sm:max-w-[550px] text-xl sm:text-2xl font-bold saira z-20 text-neutral-900">
@@ -110,36 +110,39 @@ export default function Home() {
               e inovadoras que atendam às suas necessidades
             </div>
           </div>
-          <div className="flex flex-row justify-between w-full">
-            <CardCollaborator
-              srcCollaborator="/image/collaborator/marcely.jpg"
-              altCollaborator="Marcely CEO"
-              titleCardCollaborator="CEO E ESPECIALISTA GOOGLE MEU NEGÓCIO"
-              textCardCollaborator="Marcely Granado Nied, 22 anos. Fotógrafa e especialista em posicionar marcas no Google."
-            />
-            <CardCollaborator
-              srcCollaborator="/image/collaborator/nied.png"
-              altCollaborator="Nied CEO"
-              titleCardCollaborator="CEO E GROWTH MARKETING"
-              textCardCollaborator="Mateus Nied, 26 anos.
+
+          <div className="flex justify-center items-center">
+            <div className="sm:flex grid grid-cols-2 gap-8 sm:flex-row sm:justify-between sm:w-full">
+              <CardCollaborator
+                srcCollaborator="/image/collaborator/marcely.jpg"
+                altCollaborator="Marcely CEO"
+                titleCardCollaborator="CEO E ESPECIALISTA GOOGLE MEU NEGÓCIO"
+                textCardCollaborator="Marcely Granado Nied, 22 anos. Fotógrafa e especialista em posicionar marcas no Google."
+              />
+              <CardCollaborator
+                srcCollaborator="/image/collaborator/nied.png"
+                altCollaborator="Nied CEO"
+                titleCardCollaborator="CEO E GROWTH MARKETING"
+                textCardCollaborator="Mateus Nied, 26 anos.
             Especialista em Social Media e
             growth Marketing pela FSM."
-            />
-            <CardCollaborator
-              srcCollaborator="/image/collaborator/sgaria1x1.jpeg"
-              altCollaborator="Gabriel Sgaria Dev"
-              titleCardCollaborator="Desenvolvedor de sistemas"
-              textCardCollaborator="Gabriel Sgaria, 26 anos. Desenvolvedor de Sistemas especialista em front-end."
-            />
-            <CardCollaborator
-              srcCollaborator="/image/collaborator/andre.jpg"
-              altCollaborator="Andre Gestor de trafego"
-              titleCardCollaborator="GESTOR DE TRÁFEGO"
-              textCardCollaborator="André Granado, 33 anos. Especialista em anúncios patrocinados Instagram, Facebook e Google ADS."
-            />
+              />
+              <CardCollaborator
+                srcCollaborator="/image/collaborator/sgaria1x1.jpeg"
+                altCollaborator="Gabriel Sgaria Dev"
+                titleCardCollaborator="Desenvolvedor de sistemas"
+                textCardCollaborator="Gabriel Sgaria, 26 anos. Desenvolvedor de Sistemas especialista em front-end."
+              />
+              <CardCollaborator
+                srcCollaborator="/image/collaborator/andre.jpg"
+                altCollaborator="Andre Gestor de trafego"
+                titleCardCollaborator="GESTOR DE TRÁFEGO"
+                textCardCollaborator="André Granado, 33 anos. Especialista em anúncios patrocinados Instagram, Facebook e Google ADS."
+              />
+            </div>
           </div>
           <div>
-            <h1 className="text-center bebasNeue text-2xl text-neutral-900 ">
+            <h1 className="text-center bebasNeue text-xl sm:text-2xl text-neutral-900 ">
               Para além de estereótipos, estilos de vestimenta ou preferências
               musicais, <br /> reunimos um time de mentes criativas e abertas.
             </h1>
@@ -162,7 +165,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex text-center justify-center mx-auto container my-16 text-neutral-100">
+        <div className="flex text-center justify-center mx-auto container my-16 text-4xl font-semibold bebasNeue text-neutral-100">
           CAROUSEL CLIENTES
         </div>
 
@@ -171,7 +174,7 @@ export default function Home() {
             options={{
               gap: slidesGap,
               padding: slidesPadding,
-              autoplay: true,
+              autoplay: false,
               autoWidth: true,
               perPage: slidesPerPage,
               width: "100%",

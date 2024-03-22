@@ -62,7 +62,7 @@ export default function Home() {
         </div>
         <BackgroundBeams />
       </section>
-      <section className="py-16 bg-neutral-300">
+      <section className="py-16 bg-neutral-200">
         <div className="container mx-auto flex flex-col">
           <div className="flex items-center justify-around gap-16 flex-col sm:flex-row">
             <div className="flex relative text-6xl font-semibold bebasNeue">
@@ -90,19 +90,22 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="w-full  flex mx-auto justify-center bg-neutral-300 h-full "><p className=" border-b-[0.1rem] w-[1020px] border-neutral-500"/></div>
+      <div className="w-full  flex mx-auto justify-center bg-neutral-200 h-full ">
+        <p className=" border-b-[0.1rem] w-[450px] sm:w-[1020px] border-neutral-400" />
+      </div>
 
-      <section className="bg-neutral-300 py-24">
-        <div className="container mx-auto flex flex-col justify-center items-center ">
+      <section className="bg-neutral-200 py-24">
+        <div className="container mx-auto flex flex-col gap-8">
           <div className="flex flex-col items-center justify-around gap-16 sm:flex-row w-full sm:mb-8">
             <div className="flex text-6xl font-semibold bebasNeue">
               CONHEÇA A <br /> NOSSA EQUIPE
             </div>
             <div className="flex max-w-[430px] text-center sm:text-start sm:max-w-[550px] text-xl sm:text-2xl font-bold saira z-20 text-neutral-900">
-              Cada projeto é uma chance única de impactar positivamente o seu
-              negócio. Nossa equipe altamente capacitada busca constantemente
-              ultrapassar limites criativos e de eficácia, sempre buscando
-              superar expectativas e impulsionar o sucesso do cliente.
+              Explore o talento e a dedicação de nossa equipe de colaboradores,
+              prontos para transformar suas ideias em realidade e impulsionar o
+              sucesso de seu negócio. Com uma combinação única de habilidades e
+              experiências, estamos comprometidos em oferecer soluções criativas
+              e inovadoras que atendam às suas necessidades
             </div>
           </div>
           <div className="flex flex-row justify-between w-full">

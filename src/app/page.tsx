@@ -4,10 +4,29 @@ import { CardGoogle } from "@/components/card-google";
 import { NavBar } from "@/components/nav-bar";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
+import { useEffect, useState } from "react";
+import { useWindowSize } from "react-use";
 
 export default function Home() {
+  const windowSize = useWindowSize();
+  const [slidesPerPage, setSlidesPerPage] = useState(1);
+  const [slidesGap, setSlidesGap] = useState(0);
+  const [slidesPadding, setSlidesPadding] = useState(0);
+
+  useEffect(() => {
+    if (windowSize.width < 768) {
+      setSlidesPerPage(1);
+      setSlidesGap(0);
+      setSlidesPadding(0);
+    } else {
+      setSlidesPerPage(3);
+      setSlidesGap(80);
+      setSlidesPadding(80);
+    }
+  }, [windowSize]);
+
   return (
     <div>
       <NavBar />
@@ -38,11 +57,11 @@ export default function Home() {
         <BackgroundBeams />
       </section>
       <section className="py-16 bg-neutral-300">
-        <div className="container  mx-auto flex flex-col">
-          <div className=" flex justify-around gap-16">
+        <div className="container mx-auto flex flex-col">
+          <div className=" flex items-center justify-around gap-16 flex-col sm:flex-row">
             <div className="flex relative text-6xl font-semibold bebasNeue">
               O QUE <br /> FAZEMOS?
-              <div className="absolute top-0 left-0 transform -translate-x-[155px] -translate-y-20 -rotate-[50deg] opacity-90 w-80">
+              <div className="absolute top-0 left-0 transform -translate-x-[130px] -translate-y-[40px] sm:-translate-x-[155px] sm:-translate-y-20 -rotate-[50deg] opacity-90 w-60 sm:w-80">
                 <Image
                   width={400}
                   height={400}
@@ -51,7 +70,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="max-w-[550px] text-2xl font-bold saira z-20 text-neutral-900">
+            <div className="max-w-[430px] text-center sm:text-start sm:max-w-[550px] text-xl sm:text-2xl font-bold saira z-20 text-neutral-900">
               Cada projeto é uma chance única de impactar positivamente o seu
               negócio. Nossa equipe altamente capacitada busca constantemente
               ultrapassar limites criativos e de eficácia, sempre buscando
@@ -63,11 +82,11 @@ export default function Home() {
       </section>
       <section className="py-16 bg-neutral-950">
         <div className="container mx-auto flex flex-col">
-          <div className="flex justify-around gap-16">
-            <div className="text-6xl font-semibold bebasNeue text-neutral-100">
+          <div className="flex items-center justify-around gap-16 flex-col sm:flex-row">
+            <div className="text-6xl text-center sm:text-start font-semibold bebasNeue text-neutral-100">
               Nossos <br /> Clientes
             </div>
-            <div className="max-w-[550px] text-2xl saira text-neutral-100">
+            <div className="max-w-[430px] text-center sm:text-start sm:max-w-[550px] text-xl sm:text-2xl saira text-neutral-100">
               Apresentamos alguns dos nossos clientes que alcançaram sucesso por
               meio da nossa colaboração e expertise. Ao trabalhar em estreita
               parceria com eles, identificamos oportunidades, desenvolvemos
@@ -79,28 +98,72 @@ export default function Home() {
         <div className="flex text-center justify-center mx-auto container my-16 text-neutral-100">
           CAROUSEL CLIENTES
         </div>
-        <div className="container mx-auto items-center justify-center flex">
-          <CardGoogle
-            altImage="Vl Imóveis avaliação google"
-            nameCard="VL IMÓVEIS"
-            dataCard="19-03-2024"
-            avatarGoogle="/image/av-google/VL-imoveis.png"
-            text=""
-          />
-          <CardGoogle
-            altImage="Lorian veiga avaliação google"
-            nameCard="Lorian Veiga"
-            dataCard="09-2024"
-            avatarGoogle="/image/av-google/lorian-veiga.png"
-            text="Agência super comprometida, trabalho excelente."
-          />
-          <CardGoogle
-            altImage="Bianca Souza Granado avaliação google"
-            nameCard="Bianca Souza Granado "
-            dataCard="09-2024"
-            avatarGoogle="/image/av-google/bianca-souza-granado.png"
-            text="Ótimo trabalho!"
-          />
+
+        <div className="container mx-auto items-center justify-center flex ">
+          <Splide
+            options={{
+              gap: slidesGap,
+              padding: slidesPadding,
+              autoplay: true,
+              autoWidth: true,
+              perPage: slidesPerPage,
+              width: "100%",
+              intersection: {
+                inView: {
+                  autoplay: true,
+                },
+                outView: {
+                  autoplay: false,
+                },
+              },
+            }}
+          >
+            <SplideSlide>
+              <CardGoogle
+                altImage="Gabriel Sgaria avaliação google"
+                nameCard="Gabriel Sgaria"
+                dataCard="22-03-2024"
+                avatarGoogle="/image/av-google/gabriel-sgaria.png"
+                text="Agência com profissionais que entendem do assunto, recomento muito!"
+              />
+            </SplideSlide>
+            <SplideSlide>
+              <CardGoogle
+                altImage="Vl Imóveis avaliação google"
+                nameCard="VL IMÓVEIS"
+                dataCard="19-03-2024"
+                avatarGoogle="/image/av-google/VL-imoveis.png"
+                text=""
+              />
+            </SplideSlide>
+            <SplideSlide>
+              <CardGoogle
+                altImage="Lorian veiga avaliação google"
+                nameCard="Lorian Veiga"
+                dataCard="09-2024"
+                avatarGoogle="/image/av-google/lorian-veiga.png"
+                text="Agência super comprometida, trabalho excelente."
+              />
+            </SplideSlide>
+            <SplideSlide>
+              <CardGoogle
+                altImage="Bianca Souza Granado avaliação google"
+                nameCard="Bianca Souza Granado"
+                dataCard="09-2024"
+                avatarGoogle="/image/av-google/bianca-souza-granado.png"
+                text="Ótimo trabalho!"
+              />
+            </SplideSlide>
+            <SplideSlide>
+              <CardGoogle
+                altImage="André Granado avaliação google"
+                nameCard="André Granado"
+                dataCard="09-2024"
+                avatarGoogle="/image/av-google/andre-granado.png"
+                text=""
+              />
+            </SplideSlide>
+          </Splide>
         </div>
       </section>
     </div>

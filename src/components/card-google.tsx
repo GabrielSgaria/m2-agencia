@@ -2,6 +2,7 @@ import { useState } from "react";
 import { StarFilledIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 
+
 export interface CardGoogleProps {
   text: string;
   avatarGoogle: string;

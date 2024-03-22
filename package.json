@@ -12,13 +12,15 @@
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-popover": "1.0.7",
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide": "^4.1.4",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.14",
     "next": "14.1.3",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.0.1",
-    "swiper": "^11.0.7",
+    "react-use": "^17.5.0",
     "tailwind-merge": "^2.2.2"
   },
   "devDependencies": {
@@ -32,5 +34,11 @@
     "postcss": "^8.4.36",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "compilerOptions": {
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/@splidejs/react-splide/dist/types/index.d.types"
+    ]
   }
 }

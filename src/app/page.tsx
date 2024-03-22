@@ -8,6 +8,8 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { useEffect, useState } from "react";
 import { useWindowSize } from "react-use";
+import { Footer } from "@/components/footer";
+import { ButtonWpp } from "@/components/buttonWpp";
 
 export default function Home() {
   const windowSize = useWindowSize();
@@ -19,11 +21,11 @@ export default function Home() {
     if (windowSize.width < 768) {
       setSlidesPerPage(1);
       setSlidesGap(0);
-      setSlidesPadding(0);
+      setSlidesPadding(40);
     } else {
       setSlidesPerPage(3);
-      setSlidesGap(80);
-      setSlidesPadding(80);
+      setSlidesGap(20);
+      setSlidesPadding(50);
     }
   }, [windowSize]);
 
@@ -78,6 +80,9 @@ export default function Home() {
             </div>
           </div>
           <AccordionRadix />
+          <div>
+            <ButtonWpp />
+          </div>
         </div>
       </section>
       <section className="py-16 bg-neutral-950">
@@ -166,6 +171,9 @@ export default function Home() {
           </Splide>
         </div>
       </section>
+
+
+      <Footer />
     </div>
   );
 }

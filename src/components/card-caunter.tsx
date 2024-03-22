@@ -12,12 +12,17 @@ export function CardCounter({
   andMoney,
 }: CardCounterProps) {
   return (
-    <div className="bg-neutral-100 rounded-2xl w-[500px] h-[300px] flex flex-col justify-center items-center gap-8">
-      <h1 className="text-9xl font-bold bebasNeue text-center">
+    <div className="bg-neutral-100 rounded-2xl w-[400px] h-[250px] sm:w-[450px] sm:h-[300px] flex flex-col justify-center items-center gap-8">
+      <h1 className="sm:text-8xl text-6xl font-bold bebasNeue text-center">
         {andMoney}
-        <CountUp duration={3} separator="."  end={numberCardCounter} enableScrollSpy />
+        <CountUp
+          duration={3}
+          separator="."
+          end={numberCardCounter}
+          enableScrollSpy
+        />
       </h1>
-      <span className="uppercase text-3xl bebasNeue text-center max-w-[350px]">
+      <span className="uppercase sm:text-3xl text-2xl max-w-[250px] bebasNeue text-center sm:max-w-[350px]">
         {textCardCounter}
       </span>
     </div>

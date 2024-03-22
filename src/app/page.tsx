@@ -98,28 +98,27 @@ export default function Home() {
       </div>
       <section className="bg-neutral-950 py-16" id="counter">
         <div className="container mx-auto flex justify-center items-center">
-          <div className="grid grid-cols-2 gap-x-60 gap-y-20">
-            <CardCounter 
-              andMoney=" "
+          <div className="flex flex-col gap-16 sm:grid sm:grid-cols-2 sm:gap-x-60 sm:gap-y-20">
+            <CardCounter
+              andMoney=""
               numberCardCounter={18}
               textCardCounter="PROJETOS CONCLUÍDOS"
-              />
-            <CardCounter 
-              andMoney=" "
+            />
+            <CardCounter
+              andMoney=""
               numberCardCounter={3}
               textCardCounter="anos de mercado"
-              />
-              <CardCounter 
-              andMoney="R$ "
+            />
+            <CardCounter
+              andMoney="R$"
               numberCardCounter={50000}
               textCardCounter="investidos em ads em diversos canais"
-              />
-              <CardCounter 
-              andMoney="R$ "
+            />
+            <CardCounter
+              andMoney="R$"
               numberCardCounter={500000}
               textCardCounter="VENDAS FEITAS NA INTERNET COM NOSSAS ESTRATÉGIAS"
-              />
-
+            />
           </div>
         </div>
       </section>

@@ -11,8 +11,9 @@ import "@splidejs/react-splide/css";
 import { useEffect, useState } from "react";
 import { useWindowSize } from "react-use";
 import { Footer } from "@/components/footer";
-import { ButtonWpp } from "@/components/buttonWpp";
+import { ButtonWpp } from "@/components/button-wpp";
 import { CardCollaborator } from "@/components/card-collaborator";
+import { CardCounter } from "@/components/card-caunter";
 
 export default function Home() {
   const windowSize = useWindowSize();
@@ -67,7 +68,7 @@ export default function Home() {
       <section className="py-16 bg-neutral-200">
         <div className="container mx-auto flex flex-col">
           <div className="flex items-center justify-around gap-16 flex-col sm:flex-row">
-            <div className="flex relative text-6xl text-center sm:text-start font-semibold bebasNeue">
+            <div className="flex relative text-5xl text-center sm:text-start font-semibold bebasNeue">
               O QUE <br /> FAZEMOS?
               <div className="absolute top-0 left-0 transform -translate-x-[90px] -translate-y-[40px] sm:-translate-x-[155px] sm:-translate-y-20 -rotate-[50deg] opacity-90 w-60 sm:w-80">
                 <Image
@@ -95,19 +96,39 @@ export default function Home() {
       <div className="w-full flex mx-auto justify-center bg-neutral-200 h-full ">
         <p className=" border-b-[0.1rem] w-[450px] sm:w-[1020px] border-neutral-400" />
       </div>
+      <section className="bg-neutral-950 py-16" id="counter">
+        <div className="container mx-auto flex justify-center items-center">
+          <div className="grid grid-cols-2 gap-x-60 gap-y-20">
+            <CardCounter 
+              andMoney=" "
+              numberCardCounter={18}
+              textCardCounter="PROJETOS CONCLUÍDOS"
+              />
+            <CardCounter 
+              andMoney=" "
+              numberCardCounter={3}
+              textCardCounter="anos de mercado"
+              />
+              <CardCounter 
+              andMoney="R$ "
+              numberCardCounter={50000}
+              textCardCounter="investidos em ads em diversos canais"
+              />
+              <CardCounter 
+              andMoney="R$ "
+              numberCardCounter={500000}
+              textCardCounter="VENDAS FEITAS NA INTERNET COM NOSSAS ESTRATÉGIAS"
+              />
+
+          </div>
+        </div>
+      </section>
 
       <section className="bg-neutral-200 py-24">
         <div className="container mx-auto flex flex-col gap-8">
           <div className="flex flex-col items-center justify-around gap-16 sm:flex-row w-full sm:mb-8">
-            <div className="flex text-6xl text-center sm:text-start font-semibold bebasNeue">
+            <div className="flex text-5xl text-center sm:text-start font-semibold bebasNeue">
               CONHEÇA A <br /> NOSSA EQUIPE
-            </div>
-            <div className="flex max-w-[430px] text-center sm:text-start sm:max-w-[550px] text-xl sm:text-2xl font-bold saira z-20 text-neutral-900">
-              Explore o talento e a dedicação de nossa equipe de colaboradores,
-              prontos para transformar suas ideias em realidade e impulsionar o
-              sucesso de seu negócio. Com uma combinação única de habilidades e
-              experiências, estamos comprometidos em oferecer soluções criativas
-              e inovadoras que atendam às suas necessidades
             </div>
           </div>
 
@@ -142,9 +163,9 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <h1 className="text-center bebasNeue text-xl sm:text-2xl text-neutral-900 ">
+            <h1 className="text-center bebasNeue text-xl sm:text-3xl text-neutral-900 ">
               Para além de estereótipos, estilos de vestimenta ou preferências
-              musicais, <br /> reunimos um time de mentes criativas e abertas.
+              musicais, reunimos um time de mentes criativas e abertas.
             </h1>
           </div>
         </div>
@@ -153,7 +174,7 @@ export default function Home() {
       <section className="py-16 bg-neutral-950">
         <div className="container mx-auto flex flex-col">
           <div className="flex items-center justify-around gap-16 flex-col sm:flex-row">
-            <div className="text-6xl text-center sm:text-start font-semibold bebasNeue text-neutral-100">
+            <div className="text-5xl text-center sm:text-start font-semibold bebasNeue text-neutral-100">
               Nossos <br /> Clientes
             </div>
             <div className="max-w-[430px] text-center sm:text-start sm:max-w-[550px] text-xl sm:text-2xl saira text-neutral-100">
@@ -165,11 +186,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex text-center justify-center mx-auto container my-16 text-4xl font-semibold bebasNeue text-neutral-100">
+        {/* <div className="flex text-center justify-center mx-auto container my-16 text-4xl font-semibold bebasNeue text-neutral-100">
           CAROUSEL CLIENTES
-        </div>
+        </div> */}
 
-        <div className="container mx-auto items-center justify-center flex">
+        <div className="container mx-auto items-center justify-center flex mt-28">
           <Splide
             options={{
               gap: slidesGap,

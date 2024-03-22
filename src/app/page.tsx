@@ -114,7 +114,7 @@ export default function Home() {
           <div className="flex justify-center items-center">
             <div className="sm:flex grid grid-cols-2 gap-8 sm:flex-row sm:justify-between sm:w-full">
               <CardCollaborator
-                srcCollaborator="/image/collaborator/marcely.jpg"
+                srcCollaborator="/image/collaborator/marcely1x1.jpg"
                 altCollaborator="Marcely CEO"
                 titleCardCollaborator="CEO E ESPECIALISTA GOOGLE MEU NEGÓCIO"
                 textCardCollaborator="Marcely Granado Nied, 22 anos. Fotógrafa e especialista em posicionar marcas no Google."
@@ -134,7 +134,7 @@ export default function Home() {
                 textCardCollaborator="Gabriel Sgaria, 26 anos. Desenvolvedor de Sistemas especialista em front-end."
               />
               <CardCollaborator
-                srcCollaborator="/image/collaborator/andre.jpg"
+                srcCollaborator="/image/collaborator/andre1x1.jpg"
                 altCollaborator="Andre Gestor de trafego"
                 titleCardCollaborator="GESTOR DE TRÁFEGO"
                 textCardCollaborator="André Granado, 33 anos. Especialista em anúncios patrocinados Instagram, Facebook e Google ADS."

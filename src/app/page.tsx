@@ -54,6 +54,7 @@ export default function Home() {
                 forma clara e transparente para nossa equipe e clientes.
               </p>
             </div>
+              <div className=""><ButtonWpp /></div>
           </div>
         </div>
         <BackgroundBeams />
@@ -80,8 +81,8 @@ export default function Home() {
             </div>
           </div>
           <AccordionRadix />
-          <div>
-            <ButtonWpp />
+          <div className="flex items-center justify-center mt-16">
+            <ButtonWpp/>
           </div>
         </div>
       </section>

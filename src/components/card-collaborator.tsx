@@ -14,7 +14,7 @@ export function CardCollaborator({
   textCardCollaborator,
 }: CardsCollaboratorProps) {
   return (
-    <div className="w-[230px] h-full flex flex-col gap-4 items-center my-8">
+    <div className="w-[200px] sm:w-[230px] h-full flex flex-col gap-4 items-center my-8">
       <div className="rounded-full w-40 h-40 shadow-2xl">
         <Image
           src={srcCollaborator}

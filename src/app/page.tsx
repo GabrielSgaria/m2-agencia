@@ -169,12 +169,11 @@ export default function Home() {
           CAROUSEL CLIENTES
         </div>
 
-        <div className="container mx-auto items-center justify-center flex ">
+        <div className="container mx-auto items-center justify-center flex">
           <Splide
             options={{
               gap: slidesGap,
               padding: slidesPadding,
-              autoplay: false,
               autoWidth: true,
               perPage: slidesPerPage,
               width: "100%",

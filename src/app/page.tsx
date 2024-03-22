@@ -4,7 +4,9 @@ import { CardGoogle } from "@/components/card-google";
 import { NavBar } from "@/components/nav-bar";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import Image from "next/image";
+// @ts-ignore
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+// @ts-ignore
 import "@splidejs/react-splide/css";
 import { useEffect, useState } from "react";
 import { useWindowSize } from "react-use";

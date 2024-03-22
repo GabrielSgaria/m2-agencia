@@ -19,7 +19,7 @@ export function ButtonWpp() {
             "Olá! Vim através do site da M2 Agência de Marketing."
           )
         }
-        className="flex bg-neutral-800 hover:bg-neutral-900 transition-colors p-4 w-48 rounded-xl text-2xl bebasNeue cursor-pointer items-center justify-center text-center gap-4 text-neutral-200"
+        className="flex shadow-xl bg-neutral-800 hover:bg-neutral-900 transition-colors p-4 w-48 rounded-xl text-2xl bebasNeue cursor-pointer items-center justify-center text-center gap-4 text-neutral-200"
       >
         Fale conosco <BsWhatsapp />
       </a>

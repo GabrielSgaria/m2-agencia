@@ -20,7 +20,7 @@ export function Footer() {
 
   return (
     <footer id="contatos" className=" border-t-[1px] border-neutral-200 pb-8 ">
-      <div className="container mx-auto mt-16 flex flex-col gap-16 sm:flex-row sm:justify-between sm:gap-0">
+      <div className="container mx-auto mt-16 flex flex-col gap-16 sm:flex-row sm:justify-around sm:gap-0">
         <div className="flex flex-col items-center sm:items-start ">
           <h1 className="text-4xl font-semibold bebasNeue text-neutral-800">
             Informações <br />
@@ -81,16 +81,6 @@ export function Footer() {
               <FaFacebook className="size-6" />
               <p className="h-6 font-semibold transition-all duration-500 hover:border-b-[1px] hover:border-neutral-800">
                 M2 Agência de Marketing
-              </p>
-            </Link>
-            <Link
-              target="blank"
-              href="https://www.linkedin.com/"
-              className="flex cursor-pointer flex-row items-center gap-4 text-neutral-800"
-            >
-              <LinkedInLogoIcon className="size-6" />
-              <p className="h-6 font-semibold transition-all duration-500 hover:border-b-[1px] hover:border-neutral-800">
-                ??
               </p>
             </Link>
             <Link

@@ -39,10 +39,10 @@ export default function Home() {
   return (
     <div>
       <NavBar />
-      <ButtonScrollTop />
       <section className="bg-neutral-950">
         <div className="container px-4 mx-auto flex flex-col  items-center justify-center relative z-10 h-[650px]">
           <div className="flex w-full flex-col items-center justify-center gap-8 ">
+            <ButtonScrollTop />
             <div className="flex flex-col items-center justify-center sm:items-start">
               <p className="bebasNeue text-xl text-center w-full uppercase tracking-[0.2em] text-neutral-500 sm:mb-6 sm:text-3xl">
                 Elevar Marcas com Autenticidade e Inovação
@@ -89,7 +89,10 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="w-full flex mx-auto justify-center bg-neutral-200 h-full " id="results">
+      <div
+        className="w-full flex mx-auto justify-center bg-neutral-200 h-full "
+        id="results"
+      >
         <p className=" border-b-[0.1rem] w-[450px] sm:w-[1020px] border-neutral-400" />
       </div>
       <section className="bg-neutral-950 py-16" id="counter">
@@ -190,25 +193,24 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex text-center justify-center text-4xl font-semibold bebasNeue text-neutral-100">
+        <div className="flex overflow-hidden text-center justify-center text-4xl font-semibold bebasNeue text-neutral-100">
           <div>
             <Splide
               options={{
                 type: "loop",
                 focus: "center",
-                autoPlay: 'play',
+                autoPlay: "play",
                 arrows: false,
                 pagination: false,
                 drag: "free",
                 gap: 80,
                 padding: 180,
                 autoWidth: true,
-                width: "100%",
+
                 perPage: 1,
                 autoScroll: {
                   speed: 1,
                   autoStart: true,
-
                 },
               }}
               extensions={{ AutoScroll }}

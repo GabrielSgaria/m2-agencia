@@ -2,7 +2,6 @@ import { useState } from "react";
 import { StarFilledIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 
-
 export interface CardGoogleProps {
   text: string;
   avatarGoogle: string;
@@ -27,7 +26,7 @@ export function CardGoogle({
 
   return (
     <div
-      className={`mx-3 w-96 min-h-[15rem] h-auto flex flex-col bg-neutral-800 gap-4 p-4 rounded-lg`}
+      className={`mx-3 w-64 sm:w-96 min-h-[12rem] sm:min-h-[15rem] h-auto flex flex-col bg-neutral-800 gap-4 p-4 rounded-lg`}
     >
       <div className="flex flex-row items-center w-full gap-4 justify-between">
         <div className="w-14 h-12 rounded-full">

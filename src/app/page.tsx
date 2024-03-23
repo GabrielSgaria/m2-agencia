@@ -37,26 +37,26 @@ export default function Home() {
   return (
     <div>
       <NavBar />
-      <section className="bg-neutral-950 ">
-        <div className="container mx-auto flex flex-col items-center justify-center relative z-10 h-[650px]">
+      <section className="bg-neutral-950">
+        <div className="container px-4 mx-auto flex flex-col  items-center justify-center relative z-10 h-[650px]">
           <div className="flex w-full flex-col items-center justify-center gap-8 ">
             <div className="flex flex-col items-center justify-center sm:items-start">
-              <p className="bebasNeue text-2xl tracking-[0.2em] text-neutral-500 sm:mb-6 sm:text-3xl">
-                SOBRE NÓS
+              <p className="bebasNeue text-xl text-center w-full uppercase tracking-[0.2em] text-neutral-500 sm:mb-6 sm:text-3xl">
+                Elevar Marcas com Autenticidade e Inovação
               </p>
-              <div className="text-center text-5xl font-semibold leading-tight text-neutral-100 mt-8 sm:text-start sm:text-8xl">
+              <div className="text-center text-4xl font-semibold leading-tight text-neutral-100 mt-8 sm:text-start sm:text-8xl w-full">
                 <h1>M2 AGÊNCIA</h1>
                 <span className="font-black"> DE MARKETING </span>
               </div>
-              <p className="saira max-w-[400px] text-center text-xl text-neutral-200 mt-8 sm:max-w-[900px] sm:text-center sm:text-2xl mx-auto">
-                Elevar Marcas com Autenticidade e Inovação Nossa missão é clara
-                e ousada: criar autenticidade, ir além das expectativas e
-                oferecer soluções inovadoras, personalizadas e criativas.
-                Acreditamos que criatividade implica em fugir do óbvio para
-                produzir algo novo. Estamos sempre preparados para novas
-                gerações, tendências e formatos. A M2 tem como valores ser um
-                agência Democrática, Acolhedora e Respeitosa, atingimos isso de
-                forma clara e transparente para nossa equipe e clientes.
+              <p className="saira max-w-[350px] text-center text-xl text-neutral-200 mt-8 sm:max-w-[900px] sm:text-center sm:text-2xl mx-auto">
+                Conheça a M2: Nossa missão é clara e ousada, criar
+                autenticidade, ir além das expectativas e oferecer soluções
+                inovadoras, personalizadas e criativas. Acreditamos que
+                criatividade implica em fugir do óbvio para produzir algo novo.
+                Estamos sempre preparados para novas gerações, tendências e
+                formatos. A M2 tem como valores ser um agência Democrática,
+                Acolhedora e Respeitosa, atingimos isso de forma clara e
+                transparente para nossa equipe e clientes.
               </p>
             </div>
             <div>
@@ -68,19 +68,11 @@ export default function Home() {
       </section>
       <section className="py-16 bg-neutral-200">
         <div className="container mx-auto flex flex-col">
-          <div className="flex items-center justify-around gap-16 flex-col sm:flex-row">
-            <div className="flex relative text-5xl text-center sm:text-start font-semibold bebasNeue">
+          <div className="flex items-center justify-around gap-8 sm:gap-16 flex-col sm:flex-row">
+            <div className="flex sm:text-5xl text-4xl  text-center sm:text-start font-semibold bebasNeue">
               O QUE <br /> FAZEMOS?
-              <div className="absolute top-0 left-0 transform -translate-x-[90px] -translate-y-[40px] sm:-translate-x-[155px] sm:-translate-y-20 -rotate-[50deg] opacity-90 w-60 sm:w-80">
-                <Image
-                  width={400}
-                  height={400}
-                  src="/svgs/elements/18.svg"
-                  alt="Fita adesiva"
-                />
-              </div>
             </div>
-            <div className="max-w-[430px] text-center sm:text-start sm:max-w-[550px] text-xl sm:text-2xl font-bold saira z-20 text-neutral-900">
+            <div className="max-w-[350px] text-center sm:text-start sm:max-w-[550px] text-xl sm:text-2xl font-bold saira text-neutral-900">
               Cada projeto é uma chance única de impactar positivamente o seu
               negócio. Nossa equipe altamente capacitada busca constantemente
               ultrapassar limites criativos e de eficácia, sempre buscando
@@ -124,14 +116,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-neutral-200 py-24">
+      <section className="bg-neutral-200 py-16">
         <div className="container mx-auto flex flex-col gap-8">
           <div className="flex flex-col items-center justify-around gap-16 sm:flex-row w-full sm:mb-8">
-            <div className="flex text-5xl text-center sm:text-start font-semibold bebasNeue">
+            <div className="flex sm:text-5xl text-4xl  text-center sm:text-start font-semibold bebasNeue">
               CONHEÇA A <br /> NOSSA EQUIPE
             </div>
           </div>
-
+          <div>
+            <h1 className="text-center bebasNeue text-xl sm:text-2xl text-neutral-900 ">
+              Para além de estereótipos, estilos de vestimenta ou preferências
+              musicais, reunimos um time de mentes criativas e abertas.
+            </h1>
+          </div>
           <div className="flex justify-center items-center">
             <div className="sm:flex grid grid-cols-2 gap-8 sm:flex-row sm:justify-between sm:w-full">
               <CardCollaborator
@@ -162,12 +159,6 @@ export default function Home() {
               />
             </div>
           </div>
-          <div>
-            <h1 className="text-center bebasNeue text-xl sm:text-3xl text-neutral-900 ">
-              Para além de estereótipos, estilos de vestimenta ou preferências
-              musicais, reunimos um time de mentes criativas e abertas.
-            </h1>
-          </div>
         </div>
       </section>
 
@@ -176,10 +167,10 @@ export default function Home() {
           <div className="flex items-center justify-around gap-16 flex-col sm:flex-row">
             <div className="text-center sm:text-start">
               <div className="flex flex-col gap-16">
-                <span className="text-5xl font-semibold bebasNeue text-neutral-100">
+                <span className="sm:text-5xl text-4xl text-center sm:text-start font-semibold bebasNeue text-neutral-100">
                   Nossos <br /> Clientes
                 </span>
-                <p className="text-2xl saira max-w-[500px] text-neutral-100 ">
+                <p className="saira max-w-[350px] text-center text-xl sm:max-w-[500px] sm:text-start sm:text-2xl mx-auto text-neutral-100 ">
                   Apresentamos alguns dos nossos clientes que alcançaram sucesso
                   por meio da nossa colaboração e expertise. Ao trabalhar em
                   estreita parceria com eles, identificamos oportunidades,
@@ -188,8 +179,8 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="rounded-xl p-8 max-w-[430px] h-[540px] bg-neutral-900 border-neutral-800 border-r-2 border-b-2 shadow-2xl text-center sm:text-start sm:w-[550px] text-xl sm:text-2xl saira text-neutral-100">
-              <h1 className="text-neutral-100 text-center text-5xl font-semibold bebasNeue mb-5">
+            <div className="rounded-xl p-8 w-[350px] sm:max-w-[430px] h-[540px] bg-neutral-900 border-neutral-800 border-r-2 border-b-2 shadow-2xl text-center sm:text-start sm:w-[550px] text-xl sm:text-2xl saira text-neutral-100">
+              <h1 className="text-neutral-100 text-center text-4xl sm:text-5xl font-semibold bebasNeue mb-5">
                 Contato
               </h1>
               <ContactForm />

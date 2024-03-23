@@ -12,8 +12,8 @@ export function CardCounter({
   andMoney,
 }: CardCounterProps) {
   return (
-    <div className="bg-neutral-100 rounded-2xl w-[400px] h-[250px] sm:w-[450px] sm:h-[300px] flex flex-col justify-center items-center gap-8">
-      <h1 className="sm:text-8xl text-6xl font-bold bebasNeue text-center">
+    <div className="bg-neutral-100 rounded-2xl w-[350px] h-[200px] sm:w-[400px] sm:h-[250px] flex flex-col justify-center items-center gap-8">
+      <h1 className="sm:text-7xl text-5xl font-bold bebasNeue text-center">
         {andMoney}
         <CountUp
           duration={3}
@@ -22,7 +22,7 @@ export function CardCounter({
           enableScrollSpy
         />
       </h1>
-      <span className="uppercase sm:text-3xl text-2xl max-w-[250px] bebasNeue text-center sm:max-w-[350px]">
+      <span className="uppercase sm:text-2xl text-xl max-w-[250px] bebasNeue text-center sm:max-w-[350px]">
         {textCardCounter}
       </span>
     </div>

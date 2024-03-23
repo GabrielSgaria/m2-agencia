@@ -43,7 +43,7 @@ export function AccordionRadix() {
           <Accordion.Item value="item-2">
             <Accordion.Trigger className="AccordionTrigger uppercase flex flex-row justify-between w-full items-center p-4 border-y rounded-md border-solid border-neutral-900">
               <span className="font-black text-lg sm:text-xl w-full text-start">
-                Social Midia
+                Social Media
               </span>
               <ChevronDownIcon
                 className="AccordionChevron size-8"

@@ -30,14 +30,6 @@ export function AccordionRadix() {
                 materiais que inspiram, educam e engajam.
               </p>
             </Accordion.Content>
-            <div className="absolute top-0 right-0 transform translate-x-0 translate-y-16 sm:-translate-x-20 sm:translate-y-44 -z-50">
-              <Image
-                width={300}
-                height={300}
-                src="/svgs/elements/16.svg"
-                alt="Mira"
-              />
-            </div>
           </Accordion.Item>
 
           <Accordion.Item value="item-2">

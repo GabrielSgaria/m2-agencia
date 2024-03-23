@@ -19,7 +19,7 @@ export function Footer() {
   }
 
   return (
-    <footer id="contatos" className=" border-t-[1px] border-neutral-200 pb-8 ">
+    <footer id="contacts" className=" border-t-[1px] border-neutral-200 pb-8 ">
       <div className="container mx-auto mt-16 flex flex-col gap-16 sm:flex-row sm:justify-around sm:gap-0">
         <div className="flex flex-col items-center sm:items-start ">
           <h1 className="text-4xl font-semibold bebasNeue text-neutral-800">

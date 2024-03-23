@@ -16,6 +16,7 @@ import { CardCollaborator } from "@/components/card-collaborator";
 import { CardCounter } from "@/components/card-caunter";
 import { ContactForm } from "@/components/form-contact";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+import { ButtonScrollTop } from "@/components/button-scroll-top";
 
 export default function Home() {
   const windowSize = useWindowSize();
@@ -38,6 +39,7 @@ export default function Home() {
   return (
     <div>
       <NavBar />
+      <ButtonScrollTop />
       <section className="bg-neutral-950">
         <div className="container px-4 mx-auto flex flex-col  items-center justify-center relative z-10 h-[650px]">
           <div className="flex w-full flex-col items-center justify-center gap-8 ">
@@ -67,7 +69,7 @@ export default function Home() {
         </div>
         <BackgroundBeams />
       </section>
-      <section className="py-16 bg-neutral-200">
+      <section className="py-16 bg-neutral-200" id="services">
         <div className="container mx-auto flex flex-col">
           <div className="flex items-center justify-around gap-8 sm:gap-16 flex-col sm:flex-row">
             <div className="flex sm:text-5xl text-4xl  text-center sm:text-start font-semibold bebasNeue">
@@ -87,7 +89,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="w-full flex mx-auto justify-center bg-neutral-200 h-full ">
+      <div className="w-full flex mx-auto justify-center bg-neutral-200 h-full " id="results">
         <p className=" border-b-[0.1rem] w-[450px] sm:w-[1020px] border-neutral-400" />
       </div>
       <section className="bg-neutral-950 py-16" id="counter">
@@ -117,7 +119,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-neutral-200 py-16">
+      <section className="bg-neutral-200 py-16" id="team">
         <div className="container mx-auto flex flex-col gap-8">
           <div className="flex flex-col items-center justify-around gap-16 sm:flex-row w-full sm:mb-8">
             <div className="flex sm:text-5xl text-4xl  text-center sm:text-start font-semibold bebasNeue">
@@ -163,7 +165,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-neutral-950">
+      <section className="py-16 bg-neutral-950" id="clients">
         <div className="container mx-auto flex flex-col">
           <div className="flex items-center justify-around gap-16 flex-col sm:flex-row">
             <div className="text-center sm:text-start">
@@ -210,6 +212,7 @@ export default function Home() {
                 },
               }}
               extensions={{ AutoScroll }}
+              className="opacity-65"
             >
               <SplideSlide>
                 <Image
@@ -258,6 +261,8 @@ export default function Home() {
         <div className="container mx-auto items-center justify-center flex mt-8">
           <Splide
             options={{
+              type: "loop",
+              drag: "free",
               gap: slidesGap,
               padding: slidesPadding,
               autoWidth: true,

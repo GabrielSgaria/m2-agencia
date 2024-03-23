@@ -1,28 +1,59 @@
 import { useForm, ValidationError } from "@formspree/react";
 import { CheckCircledIcon } from "@radix-ui/react-icons";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { VscLoading } from "react-icons/vsc";
 
 export function ContactForm() {
   const [state, handleSubmit] = useForm("xeqyldzz");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [showForm, setShowForm] = useState(true);
 
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    await handleSubmit(e);
-    if (state.succeeded) {
-      setIsSubmitted(true);
+  useEffect(() => {
+    let loadingTimer: NodeJS.Timeout;
+    if (isLoading) {
+      loadingTimer = setTimeout(() => {
+        setIsLoading(false);
+        setIsSubmitted(true);
+      }, 1400);
     }
+
+    return () => clearTimeout(loadingTimer);
+  }, [isLoading]);
+
+  const handleFormSubmit = async (e: any) => {
+    e.preventDefault();
+    setIsLoading(true);
+    await handleSubmit(e);
   };
+
+  useEffect(() => {
+    let submittedTimer: NodeJS.Timeout;
+    if (isSubmitted) {
+      submittedTimer = setTimeout(() => {
+        setIsSubmitted(false);
+        setShowForm(true);
+      }, 4000);
+    }
+
+    return () => clearTimeout(submittedTimer);
+  }, [isSubmitted]);
 
   return (
     <>
-      {isSubmitted ? (
+      {isLoading && (
+        <div className="text-neutral-50 bebasNeue text-center mt-28 text-5xl items-center justify-center flex flex-col">
+          Enviando...
+          <VscLoading size="40" className="animate-spin mt-8 text-neutral-50" />
+        </div>
+      )}
+      {isSubmitted && !isLoading && (
         <div className="text-neutral-50 bebasNeue text-center mt-28 text-5xl items-center justify-center flex flex-col">
           Obrigado por entrar em contato!
           <CheckCircledIcon className="animate-pulse text-lime-400 size-24 mt-8" />
         </div>
-      ) : (
+      )}
+      {!isSubmitted && !isLoading && (
         <form onSubmit={handleFormSubmit} className="flex flex-col gap-10">
           <input
             id="name"

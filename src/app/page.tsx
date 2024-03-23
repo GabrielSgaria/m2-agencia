@@ -15,6 +15,7 @@ import { ButtonWpp } from "@/components/button-wpp";
 import { CardCollaborator } from "@/components/card-collaborator";
 import { CardCounter } from "@/components/card-caunter";
 import { ContactForm } from "@/components/form-contact";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 
 export default function Home() {
   const windowSize = useWindowSize();
@@ -187,11 +188,74 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* <div className="flex text-center justify-center mx-auto container my-16 text-4xl font-semibold bebasNeue text-neutral-100">
-          CAROUSEL CLIENTES
-        </div> */}
+        <div className="flex text-center justify-center text-4xl font-semibold bebasNeue text-neutral-100">
+          <div>
+            <Splide
+              options={{
+                type: "loop",
+                focus: "center",
+                autoPlay: 'play',
+                arrows: false,
+                pagination: false,
+                drag: "free",
+                gap: 80,
+                padding: 180,
+                autoWidth: true,
+                width: "100%",
+                perPage: 1,
+                autoScroll: {
+                  speed: 1,
+                  autoStart: true,
 
-        <div className="container mx-auto items-center justify-center flex mt-28">
+                },
+              }}
+              extensions={{ AutoScroll }}
+            >
+              <SplideSlide>
+                <Image
+                  width={200}
+                  height={200}
+                  alt=""
+                  src="/image/clients/27.png"
+                />
+              </SplideSlide>
+              <SplideSlide>
+                <Image
+                  width={200}
+                  height={200}
+                  alt=""
+                  src="/image/clients/28.png"
+                />
+              </SplideSlide>
+              <SplideSlide>
+                <Image
+                  width={200}
+                  height={200}
+                  alt=""
+                  src="/image/clients/29.png"
+                />
+              </SplideSlide>
+              <SplideSlide>
+                <Image
+                  width={200}
+                  height={200}
+                  alt=""
+                  src="/image/clients/30.png"
+                />
+              </SplideSlide>
+              <SplideSlide>
+                <Image
+                  width={200}
+                  height={200}
+                  alt=""
+                  src="/image/clients/31.png"
+                />
+              </SplideSlide>
+            </Splide>
+          </div>
+        </div>
+
+        <div className="container mx-auto items-center justify-center flex mt-8">
           <Splide
             options={{
               gap: slidesGap,

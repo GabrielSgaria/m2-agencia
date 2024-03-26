@@ -173,10 +173,10 @@ export default function Home() {
           <div className="flex items-center justify-around gap-16 flex-col sm:flex-row">
             <div className="text-center sm:text-start">
               <div className="flex flex-col gap-16">
-                <span className="sm:text-5xl text-4xl text-center sm:text-start font-semibold bebasNeue text-neutral-100">
+                <span className="sm:text-5xl text-4xl text-center font-semibold bebasNeue text-neutral-100">
                   Nossos <br /> Clientes
                 </span>
-                <p className="saira max-w-[350px] text-center text-xl sm:max-w-[500px] sm:text-start sm:text-2xl mx-auto text-neutral-100 ">
+                <p className="saira max-w-[350px] text-center text-xl sm:max-w-[500px] sm:text-2xl mx-auto text-neutral-100 ">
                   Apresentamos alguns dos nossos clientes que alcançaram sucesso
                   por meio da nossa colaboração e expertise. Ao trabalhar em
                   estreita parceria com eles, identificamos oportunidades,
@@ -184,12 +184,6 @@ export default function Home() {
                   soluções inovadoras que geraram resultados tangíveis
                 </p>
               </div>
-            </div>
-            <div className="rounded-xl p-8 w-[350px] sm:max-w-[430px] h-[540px] bg-neutral-900 border-neutral-800 border-r-2 border-b-2 shadow-2xl text-center sm:text-start sm:w-[550px] text-xl sm:text-2xl saira text-neutral-100">
-              <h1 className="text-neutral-100 text-center text-4xl sm:text-5xl font-semibold bebasNeue mb-5">
-                Contato
-              </h1>
-              <ContactForm />
             </div>
           </div>
         </div>
@@ -259,7 +253,14 @@ export default function Home() {
             </Splide>
           </div>
         </div>
-
+        <div className="flex mx-auto container">
+          <div className=" mx-auto rounded-xl p-8 w-[350px] sm:max-w-[430px] h-[540px] bg-neutral-900 border-neutral-800 border-r-2 border-b-2 shadow-2xl text-center sm:text-start sm:w-[550px] text-xl sm:text-2xl saira text-neutral-100">
+            <h1 className="text-neutral-100 text-center text-3xl sm:text-4xl font-semibold bebasNeue mb-5">
+              Solicite seu orçamento
+            </h1>
+            <ContactForm />
+          </div>
+        </div>
         <div className="container mx-auto items-center justify-center flex mt-8">
           <Splide
             options={{

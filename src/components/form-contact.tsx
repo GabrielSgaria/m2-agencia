@@ -70,6 +70,13 @@ export function ContactForm() {
             className="bg-neutral-800 transition-all hover:bg-neutral-700 placeholder-neutral-500 text-neutral-50 rounded-xl py-3 px-4 text-xl sm:text-2xl"
           />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
+          <input
+            id="telefone"
+            type="telefone"
+            name="telefone"
+            placeholder="Digite o seu WhatsApp..."
+            className="bg-neutral-800 transition-all hover:bg-neutral-700 placeholder-neutral-500 text-neutral-50 rounded-xl py-3 px-4 text-xl sm:text-2xl"
+          />
           <textarea
             id="message"
             name="message"

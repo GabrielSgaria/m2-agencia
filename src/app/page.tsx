@@ -254,7 +254,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex mx-auto container">
-          <div className=" mx-auto rounded-xl p-8 w-[350px] sm:max-w-[430px] h-[540px] bg-neutral-900 border-neutral-800 border-r-2 border-b-2 shadow-2xl text-center sm:text-start sm:w-[550px] text-xl sm:text-2xl saira text-neutral-100">
+          <div className=" mx-auto rounded-xl p-8 w-[350px] sm:max-w-[430px] h-auto bg-neutral-900 border-neutral-800 border-r-2 border-b-2 shadow-2xl text-center sm:text-start sm:w-[550px] text-xl sm:text-2xl saira text-neutral-100">
             <h1 className="text-neutral-100 text-center text-3xl sm:text-4xl font-semibold bebasNeue mb-5">
               Solicite seu orçamento
             </h1>

@@ -85,12 +85,12 @@ export function Footer() {
             </Link>
             <Link
               target="blank"
-              href="https://www.instagram.com/mdoismkt/"
+              href="https://www.instagram.com/m2agenciamkt/"
               className="flex cursor-pointer flex-row items-center gap-4 text-neutral-800"
             >
               <FaInstagram className="size-6" />
               <p className="h-6 font-semibold transition-all duration-500 hover:border-b-[1px] hover:border-neutral-800">
-                @mdoismkt
+                @m2agenciamkt
               </p>
             </Link>
           </div>

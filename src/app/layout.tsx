@@ -24,12 +24,12 @@ export const metadata: Metadata = {
     siteName: "M2 AGÊNCIA DE MARKETING",
     images: [
       {
-        url: "https://opengraph.b-cdn.net/production/documents/0aaa9a44-c64f-49ec-8f05-aa200bb341e0.png?token=cbCl9zatkqfEX0QqU_jq0-PKqVyo5P0IW7XaGrg_Enw&height=432&width=894&expires=33249190037",
+        url: "https://opengraph.b-cdn.net/production/documents/59b6eae5-98d5-4576-877d-d2d2c2d31867.svg?token=dtpBRs2_WKRiIh-_2pusVTaYnGA8SHmZSuEiO_zQCuk&height=500&width=500&expires=33249190582",
         width: 800,
         height: 600,
       },
       {
-        url: "https://opengraph.b-cdn.net/production/documents/0aaa9a44-c64f-49ec-8f05-aa200bb341e0.png?token=cbCl9zatkqfEX0QqU_jq0-PKqVyo5P0IW7XaGrg_Enw&height=432&width=894&expires=33249190037",
+        url: "https://opengraph.b-cdn.net/production/documents/59b6eae5-98d5-4576-877d-d2d2c2d31867.svg?token=dtpBRs2_WKRiIh-_2pusVTaYnGA8SHmZSuEiO_zQCuk&height=500&width=500&expires=33249190582",
         width: 1800,
         height: 1600,
       },

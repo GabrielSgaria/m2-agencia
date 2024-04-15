@@ -24,12 +24,12 @@ export const metadata: Metadata = {
     siteName: "M2 AGÊNCIA DE MARKETING",
     images: [
       {
-        url: "/favicon.svg",
+        url: "/public/image/favicon.svg",
         width: 800,
         height: 600,
       },
       {
-        url: "/favicon.svg",
+        url: "/public/image/favicon.svg",
         width: 1800,
         height: 1600,
       },

@@ -17,6 +17,36 @@ export const metadata: Metadata = {
   title: "M2 Agência",
   description: "M2 AGÊNCIA DE MARKETING",
   icons: "/favicon.svg",
+  openGraph: {
+    title: "M2 Agência",
+    description: "M2 AGÊNCIA DE MARKETING",
+    url: "https://www.mdois.com.br",
+    siteName: "M2 AGÊNCIA DE MARKETING",
+    images: [
+      {
+        url: "/favicon.svg",
+        width: 800,
+        height: 600,
+      },
+      {
+        url: "/favicon.svg",
+        width: 1800,
+        height: 1600,
+      },
+    ],
+    locale: "pt_BR",
+    type: "website"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+    },
+  },
   keywords: [
     "Agência de marketing digital",
     "Desenvolvimento de sites",
@@ -39,10 +69,6 @@ export const metadata: Metadata = {
     "Design responsivo",
     "Layouts adaptáveis",
   ],
-  robots: {
-    follow: true,
-    index: true,
-  },
 };
 
 export default function RootLayout({

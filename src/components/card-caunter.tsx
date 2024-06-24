@@ -22,7 +22,7 @@ export function CardCounter({
           enableScrollSpy
         />
       </h1>
-      <span className="uppercase sm:text-2xl text-xl max-w-[250px] bebasNeue text-center sm:max-w-[350px]">
+      <span className="uppercase sm:text-3xl text- max-w-[250px] bebasNeue text-center sm:max-w-[350px]">
         {textCardCounter}
       </span>
     </div>

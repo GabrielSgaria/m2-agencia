@@ -135,6 +135,38 @@ export function AccordionRadix() {
               </p>
             </Accordion.Content>
           </Accordion.Item>
+          <Accordion.Item value="item-7">
+            <Accordion.Trigger className="AccordionTrigger uppercase flex flex-row justify-between w-full items-center p-4 border-y rounded-md border-solid border-neutral-900">
+              <span className="font-black text-lg sm:text-xl w-full text-start">
+                Fotografia
+              </span>
+              <ChevronDownIcon
+                className="AccordionChevron size-8"
+                aria-hidden
+              />
+            </Accordion.Trigger>
+            <Accordion.Content className="AccordionContent py-4 px-3 saira text-xl text-neutral-100 bg-neutral-900 rounded-md">
+              <p>
+                Fortalecimento da identidade visual, aumento da credibilidade e uma comunicação mais eficaz para sua marca.
+              </p>
+            </Accordion.Content>
+          </Accordion.Item>
+          <Accordion.Item value="item-8">
+            <Accordion.Trigger className="AccordionTrigger uppercase flex flex-row justify-between w-full items-center p-4 border-y rounded-md border-solid border-neutral-900">
+              <span className="font-black text-lg sm:text-xl w-full text-start">
+                VideoMaker
+              </span>
+              <ChevronDownIcon
+                className="AccordionChevron size-8"
+                aria-hidden
+              />
+            </Accordion.Trigger>
+            <Accordion.Content className="AccordionContent py-4 px-3 saira text-xl text-neutral-100 bg-neutral-900 rounded-md">
+              <p>
+                Produção de video, inclui planejamento, drone, gravação e edição para promoções e conteúdo digital. Garantimos qualidade profissional, maior engajamento e comunicação eficaz para sua marca.
+              </p>
+            </Accordion.Content>
+          </Accordion.Item>
         </Accordion.Root>
       </div>
     </div>

@@ -21,6 +21,8 @@ export function CardCollaborator({
           alt={altCollaborator}
           width={400}
           height={400}
+          quality={100}
+          priority={true}
           className="rounded-full object-cover w-full h-full"
         ></Image>
       </div>

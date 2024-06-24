@@ -110,12 +110,12 @@ export default function Home() {
             />
             <CardCounter
               andMoney="R$"
-              numberCardCounter={50000}
+              numberCardCounter={80000}
               textCardCounter="investidos em ads em diversos canais"
             />
             <CardCounter
               andMoney="R$"
-              numberCardCounter={500000}
+              numberCardCounter={1000000}
               textCardCounter="VENDAS FEITAS NA INTERNET COM NOSSAS ESTRATÉGIAS"
             />
           </div>
@@ -136,7 +136,7 @@ export default function Home() {
             </h1>
           </div>
           <div className="flex justify-center items-center">
-            <div className="sm:flex grid grid-cols-2 gap-8 sm:flex-row sm:justify-between sm:w-full">
+            <div className="grid grid-cols-2 gap-x-20 sm:grid-cols-3">
               <CardCollaborator
                 srcCollaborator="/image/collaborator/marcely1x1.jpg"
                 altCollaborator="Marcely CEO"
@@ -152,16 +152,28 @@ export default function Home() {
             growth Marketing pela FSM."
               />
               <CardCollaborator
-                srcCollaborator="/image/collaborator/sgaria1x1.jpeg"
+                srcCollaborator="/image/collaborator/andre1x1.jpg"
+                altCollaborator="Andre Gestor de trafego"
+                titleCardCollaborator="GESTOR DE TRÁFEGO"
+                textCardCollaborator="André Granado, 33 anos. Especialista em anúncios patrocinados Instagram, Facebook e Google ADS."
+              />
+              <CardCollaborator
+                srcCollaborator="/image/collaborator/sgaria.jpeg"
                 altCollaborator="Gabriel Sgaria Dev"
                 titleCardCollaborator="Desenvolvedor de sistemas"
                 textCardCollaborator="Gabriel Sgaria, 26 anos. Desenvolvedor de Sistemas especialista em front-end."
               />
               <CardCollaborator
-                srcCollaborator="/image/collaborator/andre1x1.jpg"
+                srcCollaborator="/image/collaborator/maceno.jpeg"
                 altCollaborator="Andre Gestor de trafego"
-                titleCardCollaborator="GESTOR DE TRÁFEGO"
-                textCardCollaborator="André Granado, 33 anos. Especialista em anúncios patrocinados Instagram, Facebook e Google ADS."
+                titleCardCollaborator="Fernando Maceno"
+                textCardCollaborator="Fernando Maceno, 23 anos, especialista em produção audiovisual."
+              />
+              <CardCollaborator
+                srcCollaborator="/image/collaborator/robson.png"
+                altCollaborator="Andre Gestor de trafego"
+                titleCardCollaborator="Robson Correia"
+                textCardCollaborator="Robson Correia, 29 anos, formado em Designer gráfico e atualmente também faz parte do time de marketing da Uniandrade."
               />
             </div>
           </div>
